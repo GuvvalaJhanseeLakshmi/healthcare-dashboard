@@ -1,0 +1,111 @@
+/* Header container */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Top section: Search bar with icon and bell */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 100%;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #9ca3af;
+}
+
+.search-input {
+  flex: 1;
+  padding-left: 30px; /* for icon */
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+}
+
+.bell-icon {
+  color: #6b7280;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Bottom section: Logo and profile area */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo styles */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.dot {
+  color: #3b82f6;
+}
+
+/* Right side icons */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile {
+  font-size: 22px;
+}
+
+.add-button {
+  cursor: pointer;
+  color: #374151;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .bottom-section {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .right-section {
+    gap: 12px;
+  }
+}
