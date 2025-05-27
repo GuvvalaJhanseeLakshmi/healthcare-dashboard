@@ -1,0 +1,70 @@
+.appointment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.appointment-card {
+  border-radius: 16px;
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.blue-bg {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.gray-bg {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  font-size: 18px;
+  font-weight: 600;
+    line-height:0.5;
+}
+
+.bold-black {
+  font-weight: bold;
+  color: #111827;
+}
+
+.black-text {
+  color: #111827;
+  font-size: 17px;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+/* Responsive: Stack cards on mobile */
+@media (max-width: 768px) {
+  .appointment-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .appointment-card {
+    width: 100%;
+    white-space: normal;
+  }
+}

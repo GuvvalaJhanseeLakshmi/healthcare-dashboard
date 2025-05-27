@@ -1,0 +1,37 @@
+/* src/styles/global.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* ✅ removes global scrollbar */
+}
+
+.app-container {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background-color: #f5f9ff;
+  overflow: hidden; /* ✅ prevents outer scroll */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto; /* ✅ only this one scrolls */
+  height: 100vh;
+}
+
+/* Mobile Responsive Fixes */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+    height: calc(100vh - 60px);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

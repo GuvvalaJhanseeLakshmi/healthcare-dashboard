@@ -1,0 +1,142 @@
+/* src/styles/sidebar.css */
+
+:root {
+  --sidebar-width: 200px;
+  --sidebar-bg: #e8eaeb;
+  --sidebar-text: #464747;
+  --highlight-color: #151718;
+}
+
+/* Reset some basics */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Desktop: sidebar always visible */
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+
+  .mobile-topbar {
+    display: none;
+  }
+}
+
+/* Mobile: sidebar hidden by default */
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile topbar */
+  .mobile-topbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 10px 15px;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1100;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    color: var(--sidebar-text);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+/* Logo styles */
+.sidebar-logo, .mobile-logo {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.health-text {
+  color: #00b3a1;
+}
+
+.care-text {
+  color: #000;
+}
+
+
+/* Nav list styles */
+.sidebar ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.highlight {
+  color:black;
+  font-weight: bold;
+  font-size: large;
+ 
+}
+
+.sidebar ul li .icon {
+  font-size: 1.2rem;
+}
+
+/* Make sure body content is pushed right on desktop */
+/* You need to add this class or inline style to your main content container */
+/* For example: <main className="main-content"> */
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: var(--sidebar-width);
+    padding: 20px;
+  }
+}
+
+/* On mobile, main content takes full width, and topbar is fixed */
+@media (max-width: 767px) {
+  .main-content {
+    margin-left: 0;
+    padding-top: 60px; /* space for mobile topbar */
+    padding: 20px;
+  }
+}
