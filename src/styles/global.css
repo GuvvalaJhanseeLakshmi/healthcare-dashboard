@@ -10,7 +10,7 @@ html, body {
   display: flex;
   font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
-  background-color: #f5f9ff;
+  background-color: #fff;
   overflow: hidden; /* ✅ prevents outer scroll */
 }
 

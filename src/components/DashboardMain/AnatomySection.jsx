@@ -9,7 +9,7 @@ const AnatomySection = () => (
         <div className="image-container">
           <img src="./humanbody.jpg" alt="Human Anatomy" className="anatomy-img" />
           <div className="badge heart">❤️ Healthy Heart</div>
-          <div className="badge liver">💙 Healthy Liver</div>
+          <div className="badge leg">🦵 Healthy Leg</div>
         </div>
       </div>
 
