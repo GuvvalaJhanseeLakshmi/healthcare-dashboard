@@ -95,11 +95,11 @@
 
 /* Background colors */
 .profile {
-  background-color: #2563eb; /* Blue */
+  background-color:rgb(148, 241, 232); /* Blue */
 }
 
 .add-button {
-  background-color: #dc2626; /* Red */
+  background-color: #2563eb; /* Red */
   cursor: pointer;
 }
 
