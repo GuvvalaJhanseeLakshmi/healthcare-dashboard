@@ -6,7 +6,7 @@ const AnatomySection = () => (
     <div className="anatomy-main">
       <div className="anatomy-left">
         <div className="image-container">
-          <img src="./humannbody.png" alt="Human Anatomy" className="anatomy-img" />
+          <img src="./humanbody.jpg" alt="Human Anatomy" className="anatomy-img" />
           <div className="badge heart">❤️ Healthy Heart</div>
           <div className="badge leg">🦵 Healthy Leg</div>
         </div>

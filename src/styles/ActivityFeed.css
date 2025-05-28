@@ -1,10 +1,12 @@
 .activity-feed {
-  background-color:#f3f4f6;
+  background-color: #f3f4f6;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   width: 100%;
-  max-width:500px;
+  max-width: 500px;
+  margin-top: 4rem;
+  box-sizing: border-box;
 }
 
 .activity-header {
@@ -26,33 +28,35 @@
   margin: 0;
 }
 
-/* Bar chart and bar styles */
+/* Bar chart styles */
 
 .bar-chart {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   height: 140px;
-  padding: 0 20px;
-  gap: 12px; /* add some space between days */
+  padding: 0 10px;
+  gap: 10px;
+  flex-wrap: wrap; /* allow bars to wrap on small screens */
 }
 
 .bar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
+  align-items: center;
+  width: 30px;
 }
 
 .bar-group {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
-  gap: 9px;
+  justify-content: center;
+  gap: 6px;
   height: 100px;
 }
 
 .bar-line {
-  width: 7px;
+  width: 6px;
   border-radius: 4px;
   transition: height 0.3s ease;
 }
@@ -63,26 +67,42 @@
   color: #6b7280;
 }
 
-/* Responsive adjustments */
+/* Mobile Responsive (up to 768px) */
 
 @media (max-width: 768px) {
-  .bar {
-    width:auto;
+  .activity-feed {
+    padding: 16px;
+    margin-top: 3rem;
   }
 
-  .bar span {
-    font-size: 10px;
+  .activity-feed h4 {
+    font-size: 16px;
   }
 
   .activity-subtext {
     font-size: 12px;
   }
 
+  .bar-chart {
+    padding: 0 6px;
+    gap: 6px;
+    height: 120px;
+  }
+
+  .bar {
+    width: 20px;
+  }
+
+  .bar span {
+    font-size: 10px;
+  }
+
   .bar-line {
-    width: 5px;
+    width: 4px;
   }
 
   .bar-group {
-    gap: 3px;
+    gap: 4px;
+    height: 90px;
   }
 }
