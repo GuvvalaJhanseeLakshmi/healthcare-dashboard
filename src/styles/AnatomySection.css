@@ -1,47 +1,57 @@
 .anatomy-section-wrapper {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
+ background-color:fff;
+  border-radius: 20px;
+  padding: 20px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); */
   width: 100%;
-  max-width: 800px;         /* ✅ Limit width */
-  margin: 0 auto;           /* ✅ Center it horizontally */
+  max-width:500px;
 }
-
+.activity-feed {
+  background-color:;
+  border-radius: 20px;
+  padding: 20px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); */
+  width: 100%;
+  max-width:600px;
+}
 .anatomy-main {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
+  
 }
 
 .anatomy-left {
-  flex: 1;
+  flex: 2;
   display: flex;
   justify-content: center;
+
 }
 
 .image-container {
   position: relative;
   max-width: 100%;
+background-color: #f3f4f6;
+   /* background-color:rgb(226, 219, 219)!important; */
+   
 }
 
 .anatomy-img {
   width: 100%;
   max-width: 220px;
   border-radius: 10px;
-  background-color:  #f8f2f2;
+  background-color: #f3f4f6;
 }
 
+/* Badge styles */
 .badge {
   position: absolute;
-  padding: 6px 12px;
+  padding: 6px 10px;
   background-color: #4f46e5;
   color: #f8f2f2;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -52,27 +62,32 @@
   transform: translate(-50%, -50%);
 }
 
-.badge.liver {
-  top: 45%;
-  left: 55%;
+.badge.leg {
+  top: 85%;
+  left: 45%;
   transform: translate(-50%, -50%);
+  background: rgb(148, 241, 232);
 }
 
+/* Right section with organ cards */
 .anatomy-right {
-  width: 180px;
+  flex: 1;
+  max-width: 120px; /* reduced further */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  
 }
 
 .organ-card {
-  background:  #f8f2f2;
+ background-color: #f3f4f6;
   border-radius: 10px;
-  padding: 14px 12px;
+  padding: 12px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-size: 14px;
 }
 
 .organ-icon {
@@ -82,13 +97,13 @@
 }
 
 .organ-date {
-  font-size: 13px;
+  font-size: 12px;
   color: #6b7280;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .organ-line {
-  height: 5px;
+  height: 6px;
   width: 100%;
   border-radius: 10px;
 }
@@ -103,6 +118,7 @@
   background-color: #f59e0b;
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .anatomy-main {
     flex-direction: column;
@@ -113,10 +129,18 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 100%;
+    gap: 6px;
   }
 
   .organ-card {
     flex: 1;
-    margin: 0 4px;
+    min-width: 80px;
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+
+  .organ-icon {
+    font-size: 18px;
   }
 }

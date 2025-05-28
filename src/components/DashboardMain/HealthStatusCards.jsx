@@ -13,8 +13,8 @@ const HealthStatusCards = () => (
           <p className={`title ${item.type === 'gray' ? 'bold-black' : ''}`}>
             {item.name} <span className="icon">{item.icon}</span>
           </p>
-          <p className={`time ${item.type === 'gray' ? 'black-text' : ''}`}>{item.time}</p>
-          <p className={`doctor ${item.type === 'gray' ? 'black-text' : ''}`}>{item.doctor}</p>
+          <p className="time">{item.time}</p>
+          <p className="doctor">{item.doctor}</p>
         </div>
       </div>
     ))}

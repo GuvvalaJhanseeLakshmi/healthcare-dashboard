@@ -1,4 +1,3 @@
-// src/components/DashboardMainContent.jsx
 import React from 'react';
 
 import '../styles/DashboardMainContent.css';
@@ -10,18 +9,18 @@ import UpcomingSchedule from './DashboardMain/UpcomingSchedule';
 import ActivityFeed from './DashboardMain/ActivityFeed';
 
 const DashboardMainContent = () => (
- <div className="dashboard-layout">
-  <div className="left-panel">
-    <AnatomySection />
-   
-    <ActivityFeed />
+  <div className="dashboard-layout">
+    <div className="left-panel">
+      <h2 className="dashboard-title">Dashboard</h2>
+      <AnatomySection />
+      <ActivityFeed />
+    </div>
+    <div className="right-panel">
+      <CalendarView />
+      <HealthStatusCards />
+      <UpcomingSchedule />
+    </div>
   </div>
-  <div className="right-panel">
-    <CalendarView />
-     <HealthStatusCards />
-    <UpcomingSchedule />
-  </div>
-</div>
 );
 
 export default DashboardMainContent;

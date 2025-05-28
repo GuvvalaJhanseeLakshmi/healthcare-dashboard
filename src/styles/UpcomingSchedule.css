@@ -1,5 +1,5 @@
 .upcoming-schedule {
-  background-color: #f8f2f2;
+  background-color:fff;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -7,6 +7,7 @@
   margin-top: 1.5rem;
   width: 100%;
 }
+  
 
 .upcoming-schedule h2 {
   font-size: 1.25rem;
@@ -37,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #f3f4f6;
+  background-color:#E6E6E6;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
   font-size: 0.85rem;

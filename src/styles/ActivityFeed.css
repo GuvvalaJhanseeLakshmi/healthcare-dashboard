@@ -1,44 +1,59 @@
-
 .activity-feed {
-  background-color: #f8f2f2;
-  border-radius: 15px;
+  background-color:#f3f4f6;
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   width: 100%;
-  max-width: 820px;
+  max-width:500px;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
 }
 
 .activity-feed h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .activity-subtext {
   font-size: 14px;
   color: #6b7280;
-  margin-bottom: 20px;
+  margin: 0;
 }
+
+/* Bar chart and bar styles */
 
 .bar-chart {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-  height: 120px;
-  padding: 0 10px;
+  height: 140px;
+  padding: 0 20px;
+  gap: 12px; /* add some space between days */
 }
 
 .bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30px;
+  align-items: flex-start;
+  margin: 0;
 }
 
-.fill {
-  width: 100%;
-  border-radius: 6px;
-  background-color: #4f46e5;
+.bar-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 9px;
+  height: 100px;
+}
+
+.bar-line {
+  width: 7px;
+  border-radius: 4px;
   transition: height 0.3s ease;
 }
 
@@ -48,10 +63,11 @@
   color: #6b7280;
 }
 
-/* Responsive */
+/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .bar {
-    width: 20px;
+    width:auto;
   }
 
   .bar span {
@@ -60,5 +76,13 @@
 
   .activity-subtext {
     font-size: 12px;
+  }
+
+  .bar-line {
+    width: 5px;
+  }
+
+  .bar-group {
+    gap: 3px;
   }
 }

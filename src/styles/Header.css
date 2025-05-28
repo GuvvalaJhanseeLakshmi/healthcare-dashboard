@@ -1,89 +1,97 @@
-/* Header container */
 .header {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 16px;
+  padding: 20px 24px;
+
+  margin-top: 3rem;
 }
 
-/* Top section: Search bar with icon and bell */
+/* Top section with search and profile/add aligned horizontally */
 .top-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* search left, icons right */
   width: 100%;
-  flex-wrap: wrap;
 }
 
+/* Search wrapper with fixed width and padding for icons */
 .search-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  flex: 1;
-  max-width: 100%;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-right: 10px;
+  width: 400px; /* fixed width */
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 44px 12px 44px; /* padding for left and right icons */
+  font-weight: 600;
+  font-size: 17px;
+  cursor: text;
 }
 
+/* Search icon on left */
 .search-icon {
   position: absolute;
-  left: 12px;
-  color: #9ca3af;
+  left: 16px;
+  color: #6b7280;
 }
 
+/* Search input styles */
 .search-input {
   flex: 1;
-  padding-left: 30px; /* for icon */
   border: none;
   outline: none;
   background: transparent;
-  font-size: 16px;
-}
-
-.bell-icon {
-  color: #6b7280;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-/* Bottom section: Logo and profile area */
-.bottom-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-/* Logo styles */
-.logo {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
   color: #111827;
+  padding-right: 36px; /* space for bell icon */
 }
 
-.dot {
-  color: #3b82f6;
+/* Bell icon inside search bar */
+.bell-icon {
+  position: absolute;
+  right: 12px;
+  color: #4b5563;
+  cursor: pointer;
 }
 
-/* Right side icons */
+/* Right side icons container */
 .right-section {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
+/* Profile icon no background, bigger size */
 .profile {
-  font-size: 22px;
+  font-size: 34px;
+  cursor: default;
+  user-select: none;
+  background-color: transparent; /* no background */
+  padding: 0; /* no padding */
+  color: #0369a1; /* keep blue-ish color for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Add button no background */
 .add-button {
   cursor: pointer;
-  color: #374151;
+  color: #3b82f6; /* blue icon color */
+  background-color: transparent; /* no background */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  font-size: 28px; /* bigger size */
+}
+
+.add-button:hover {
+  color: #2563eb; /* darker blue on hover */
 }
 
 /* Responsive design */
@@ -91,18 +99,14 @@
   .top-section {
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 12px;
   }
 
   .search-wrapper {
     width: 100%;
     margin-right: 0;
-  }
-
-  .bottom-section {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    padding-left: 44px;
+    padding-right: 44px;
   }
 
   .right-section {

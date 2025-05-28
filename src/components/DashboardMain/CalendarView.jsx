@@ -1,6 +1,7 @@
 // src/components/CalendarView.jsx
 import React from 'react';
 import '../../styles/CalendarView.css';
+import { Bell, Plus, Search } from 'lucide-react';
 
 const CalendarView = () => {
   const week = [
@@ -15,7 +16,14 @@ const CalendarView = () => {
 
   return (
     <div className="calendar-block">
+        <div className="right-section">
+                <div className="profile">👤</div>
+                <Plus className="add-button" size={28} />
+              </div>
+        <h3>October 2021</h3>
+         
       <div className="calendar-row days">
+        
         {week.map((item, index) => (
           <div key={index} className="calendar-cell">{item.day}</div>
         ))}

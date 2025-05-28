@@ -1,24 +1,23 @@
-// src/components/Header.jsx
 import React from 'react';
 import { Bell, Plus, Search } from 'lucide-react';
+import '../styles/Header.css';
 
 const Header = () => (
   <header className="header">
     <div className="top-section">
-      <div className="search-wrapper">
-        <Search className="search-icon" size={18} />
+      <label className="search-wrapper">
+        <Search className="search-icon" size={22} />
         <input className="search-input" type="text" placeholder="Search..." />
-      </div>
-      <Bell className="bell-icon" size={20} />
+        <Bell className="bell-icon" size={24} />
+      </label>
+
+     
     </div>
 
-    <div className="bottom-section">
-      <div className="logo">Dashboard<span className="dot">.</span></div>
-      <div className="right-section">
-        <div className="profile">👤</div>
-        <Plus className="add-button" />
-      </div>
-    </div>
+    {/* Bottom section if you want later */}
+    {/* <div className="bottom-section">
+      <div className="logo">Dashboard<span className="dot"></span></div>
+    </div> */}
   </header>
 );
 

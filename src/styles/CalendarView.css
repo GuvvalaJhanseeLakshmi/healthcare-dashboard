@@ -1,48 +1,51 @@
 .calendar-block {
-  background-color: #f8f2f2;
+  /* background-color:hsl(0, 0%, 90%); */
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); */
   width: 100%;
-  box-sizing: border-box;
-  overflow-x: auto;
+  max-width:500px;
+  margin-top: 5rem;
+
 }
 
 .calendar-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  gap: 10px;
+  margin-bottom: 10px; /* Less vertical spacing */
+  gap: 12px; /* Minimal column gap */
 }
 
 .calendar-cell {
   flex: 1;
-  min-width: 80px;
+  min-width: 30px; /* Reduced from 60 or 80 */
   text-align: center;
   font-weight: 500;
+  padding: 0; /* Remove padding to compress spacing */
+  font-size: 12px; /* Slightly smaller text */
 }
 
 .days .calendar-cell {
-  font-size: 14px;
+  font-size: 11px;
   color: #6b7280;
 }
 
 .dates .calendar-cell {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 600;
   color: #111827;
 }
 
 .times .calendar-cell {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .time-slot {
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 16px;
+  font-size: 10px; /* Smallest comfortable font */
+  padding: 2px 4px; /* Compact padding */
+  border-radius: 12px;
   background-color: #f3f4f6;
   display: inline-block;
   margin: 0 auto;
@@ -58,18 +61,34 @@
   color: #111827;
 }
 
+.right-section {
+  display: right;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-section {
+  display: flex;
+  justify-content: flex-end; /* Align children to the right */
+  align-items: center;
+  gap: 16px;
+  width: 100%; /* Optional: ensures it spans full width of parent */
+  margin-bottom: 1rem; /* Optional: spacing below if needed */
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .calendar-block {
-    padding: 15px;
+    padding: 8px;
   }
 
   .calendar-cell {
-    min-width: 60px;
+    min-width: 35px;
+    font-size: 11px;
   }
 
   .time-slot {
-    font-size: 11px;
-    padding: 3px 6px;
+    font-size: 9px;
+    padding: 2px 3px;
   }
 }
